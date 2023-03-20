@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="400"
+        motion:staggered=".65">
+       <OnSwipe
+           motion:touchRegionId="@+id/content"
+           motion:dragDirection="dragUp"/>
+        <KeyFrameSet >
+            <KeyPosition
+                motion:motionTarget="@+id/helal"
+                motion:framePosition="50"
+                motion:keyPositionType="parentRelative"
+                motion:percentY=".3" />
+            <KeyAttribute
+                motion:motionTarget="@+id/stars_bg"
+                motion:framePosition="90"
+                android:rotation="180"
+                android:scaleX="3"
+                android:scaleY="3" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/helal"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="267dp"
+            android:layout_height="307dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="180dp"
+            motion:layout_constraintStart_toStartOf="parent"/>
+        <Constraint
+            android:id="@+id/stars_bg"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="385dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="200dp"
+            motion:layout_constraintStart_toStartOf="parent"/>
+        <Constraint
+            android:id="@+id/top_fawnees"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/helal"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="267dp"
+            android:layout_height="307dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="180dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/stars_bg"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="385dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="200dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/top_fawnees"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"/>
+        <Constraint
+            android:id="@+id/content"
+            layout="@layout/prayer_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="185dp"
+            android:layout_marginEnd="8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible" />
+    </ConstraintSet>
+</MotionScene>

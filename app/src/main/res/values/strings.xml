@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Ramdan Motion</string>
+    <string name="prayer_time">Prayer Time</string>
+    <string name="fajr">Fajr</string>
+    <string name="dhuhr">Dhuhr</string>
+    <string name="isha">Isha</string>
+    <string name="_7_10_pm">7:10 PM</string>
+    <string name="_4_37_am">4:37 AM</string>
+    <string name="_11_50_am">11:50 AM</string>
+    <string name="_3_17_pm">3:17 PM</string>
+    <string name="asr">Asr</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="_5_53_pm">5:53 PM</string>
+</resources>
